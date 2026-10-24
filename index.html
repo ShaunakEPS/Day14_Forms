@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Two Truths and a Lie</title>
 </head>
-<body>
-    
+<body style="background-color: beige;">
+    <h1>Shaunak's Truth and Lie Game</h1>
+    <hr> <!--Draws a line-->
+    <h2>Introductions</h2>
+    <form action="" id="name-form"> <!--An action is what happens when the form is submitted-->
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="fname" id="fname"> <!--Specifies that desired input is text--><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="lname" id="lname"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" name="age" id="age"><br><br>
+    </form>
+    <input type="button" value="SUBMIT" onclick="greet();">
+    <p id="greet" style="font-size: x-large;">Welcome!</p>
+    <h2>Two Truths and a Lie</h2>
+    <p>Which of these do you think is untrue about me?</p>
+    <p id="truthandlie-answer"></p>
+    <form action="">
+        <input type="radio" name="truthandlie" id="truth1">
+        <label for="truth1">I am half Indian</label><br>
+        <input type="radio" name="truthandlie" id="lie">
+        <label for="lie">As a teenager, I want to be more independent from my parents.</label><br>
+        <input type="radio" name="truthandlie" id="truth2">
+        <label for="truth2">I play double bass.</label><br>
+    </form> <!--If radio buttons are in the same form, then you can only pick one of them. You can pick many by putting them in different forms.-->
+    <input type="button" value="SUBMIT" onclick="truthandlie1();">
+    <h2>Two Truths and a Lie Round 2</h2>
+    <p>Which of these do you think are true? Pick the two true ones.</p>
+    <p id="truthandlie2-answer"></p>
+    <form action="">
+        <input type="checkbox" name="truthandlie2" id="truth1_2">
+        <label for="truth1_2">Capital of Brunei is Bandar Seri Begawan</label><br>
+        <input type="checkbox" name="truthandlie2" id="lie2">
+        <label for="lie2">Capital of Tajikistan is Ashgabat</label><br>
+        <input type="checkbox" name="truthandlie" id="truth2_2">
+        <label for="truth2_2">Capital of Fiji is Suva</label><br>
+    </form>
+    <input type="button" value="SUBMIT" onclick="truthandlie2();">
+    <script src="javascript/truth.js"></script> <!--This is how you link to a javascript page. Generally best to link at bottom.-->
 </body>
 </html>
